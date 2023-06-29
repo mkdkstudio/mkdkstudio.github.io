@@ -1,0 +1,19 @@
+{
+  "name": "mkdkstudio.github.io",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "serve": "vue-cli-service serve --openssl-legacy-provider",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "gh-pages": "^5.0.0"
+  },
+  "resolutions": {
+    "sharp": "^0.29.0"
+  }
+}
