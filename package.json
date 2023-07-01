@@ -10,10 +10,17 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
+    "element-ui": "^2.13.2",
+    "gh-pages": "^5.0.0",
     "gridsome": "^0.7.0",
-    "gh-pages": "^5.0.0"
+    "vue2-transitions": "^0.3.0"
   },
   "resolutions": {
     "sharp": "^0.29.0"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "sass-loader": "^10.0.0"
   }
 }
