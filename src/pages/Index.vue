@@ -1,6 +1,11 @@
 <template>
-  <BaseFullPageBackground />
-  <!-- Seu conteúdo da página aqui -->
+  <div>
+    <BaseFullPageBackground />
+    <BaseAbout text="Este é um texto que será exibido no componente About" />
+    <BasePlatform text="Este é um texto que será exibido no componente Platform" />
+    <BaseMusicPlayer />
+  </div>
+  
 </template>
 <script>
 
