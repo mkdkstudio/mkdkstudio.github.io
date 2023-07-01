@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import 'bootstrap/dist/css/bootstrap.css';
-import '@/assets/scss/now-ui-kit.scss'; 
 
 // Use a função require.context para importar os componentes da pasta 'components'.
 const requireComponent = require.context(
