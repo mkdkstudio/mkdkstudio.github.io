@@ -24,7 +24,7 @@
   /* Estilos da imagem de logo */
   .logo {
     /* Defina o tamanho da imagem de logo conforme necessário */
-    width: 500px;
+    width: 45vw;
     height: auto;
     
     /* Centraliza a imagem horizontalmente */
