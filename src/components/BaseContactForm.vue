@@ -1,18 +1,19 @@
 <template>
     <div class="contact-form-content-section">
-    <form class="contact-form" @submit.prevent="submitForm">
-        <div class="form-group">
-            <input type="text" id="name" placeholder="NAME" v-model="formData.name" required>
-        </div>
-        <div class="form-group">
-            <input type="email" id="email" placeholder="EMAIL" v-model="formData.email" required>
-        </div>
-        <div class="form-group">
-            <textarea id="message" placeholder="MESSAGE" v-model="formData.message" required></textarea>
-        </div>
-        <button type="submit">SUBMIT</button>
-    </form>
-</div>
+        <form class="contact-form" @submit.prevent="submitForm">
+            <h3>Send us a message</h3>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="NAME" v-model="formData.name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="EMAIL" v-model="formData.email" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder="MESSAGE" v-model="formData.message" required></textarea>
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
 </template>
   
 <script>
@@ -50,12 +51,13 @@ export default {
 </script>
   
 <style>
-  .contact-form-content-section {
-    background-color: #343434; /* Cor de fundo para destacar o componente */
+.contact-form-content-section {
+    background-color: #343434;
+    /* Cor de fundo para destacar o componente */
     height: 400px;
     display: flex;
     align-items: center;
-  }
+}
 
 
 .contact-form {
@@ -95,6 +97,12 @@ button {
 
 button:hover {
     background-color: #ea4c69;
+}
+
+form h3 {
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
 }
 
 form input:focus-visible {
