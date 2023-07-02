@@ -1,98 +1,110 @@
 <template>
+    <div class="contact-form-content-section">
     <form class="contact-form" @submit.prevent="submitForm">
-      <div class="form-group">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" v-model="formData.name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" v-model="formData.email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Mensagem:</label>
-        <textarea id="message" v-model="formData.message" required></textarea>
-      </div>
-      <button type="submit">Enviar</button>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="NAME" v-model="formData.name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="EMAIL" v-model="formData.email" required>
+        </div>
+        <div class="form-group">
+            <textarea id="message" placeholder="MESSAGE" v-model="formData.message" required></textarea>
+        </div>
+        <button type="submit">SUBMIT</button>
     </form>
-  </template>
+</div>
+</template>
   
-  <script>
-  import axios from 'axios';
-  
-  export default {
+<script>
+import axios from 'axios';
+
+export default {
     data() {
-      return {
-        formData: {
-          name: '',
-          email: '',
-          message: '',
-        },
-      };
+        return {
+            formData: {
+                name: '',
+                email: '',
+                message: '',
+            },
+        };
     },
     methods: {
-      async submitForm() {
-        try {
-          // Substitua o 'YOUR_FORMSPREE_ENDPOINT' pelo endpoint fornecido pelo Formspree
-          const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xqkvzjny';
-  
-          const response = await axios.post(FORMSPREE_ENDPOINT, this.formData);
-  
-          if (response.status === 200) {
-            console.log('Dados enviados com sucesso!');
-            // Você pode adicionar aqui uma mensagem de sucesso ou redirecionar para outra página
-          }
-        } catch (error) {
-          console.error('Erro ao enviar dados:', error);
-          // Você pode adicionar aqui uma mensagem de erro para o usuário
-        }
-      },
+        async submitForm() {
+            try {
+                // Substitua o 'YOUR_FORMSPREE_ENDPOINT' pelo endpoint fornecido pelo Formspree
+                const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xqkvzjny';
+
+                const response = await axios.post(FORMSPREE_ENDPOINT, this.formData);
+
+                if (response.status === 200) {
+                    console.log('Dados enviados com sucesso!');
+                    // Você pode adicionar aqui uma mensagem de sucesso ou redirecionar para outra página
+                }
+            } catch (error) {
+                console.error('Erro ao enviar dados:', error);
+                // Você pode adicionar aqui uma mensagem de erro para o usuário
+            }
+        },
     },
-  };
-  </script>
+};
+</script>
   
-  <style>
-  .contact-form {
-    max-width: 400px;
+<style>
+  .contact-form-content-section {
+    background-color: #343434; /* Cor de fundo para destacar o componente */
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+
+.contact-form {
+    width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 20px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     font-weight: bold;
-  }
-  
-  input,
-  textarea {
+}
+
+input,
+textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
+    border: 2px solid #cc6666;
+}
+
+button {
     display: block;
     width: 100%;
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: #cc6666;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  </style>
+}
+
+button:hover {
+    background-color: #ea4c69;
+}
+
+form input:focus-visible {
+    outline: none;
+    /* Remove a borda de foco */
+}
+
+form textarea:focus-visible {
+    outline: none;
+    /* Remove a borda de foco */
+}
+</style>
   
