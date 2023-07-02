@@ -1,50 +1,18 @@
 <template>
-    <div class="music-player">
-        <audio ref="audioPlayer" controls>
-            <!-- Utilize o caminho correto do arquivo MP3 na pasta assets -->
-            <source v-for="(song, index) in songs" :key="index" :src="getMusicPath(song.url)" :title="song.title">
-        </audio>
+    <div>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1645815742%3Fsecret_token%3Ds-YukGgWiEcps&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true"></iframe>
     </div>
 </template>
   
 <script>
 export default {
-    data() {
-        return {
-            songs: [
-                {
-                    url: 'mkdk-action-guitar-song.mp3', // Caminho relativo ao arquivo MP3 na pasta assets
-                    title: 'Song 1'
-                }
-                // Adicione mais músicas conforme necessário
-            ]
-        };
+    props: {
+        iframeSrc: {
+            type: String,
+            required: true,
+        },
     },
-    methods: {
-        getMusicPath(url) {
-            // Obtenha o caminho correto do arquivo MP3 na pasta assets
-            console.log('@/assets/' + url);
-            return require('~/assets/music/' + url).default;
-        },
-        play() {
-            this.$refs.audioPlayer.play();
-        },
-        pause() {
-            this.$refs.audioPlayer.pause();
-        }
-    }
 };
 </script>
-
-<style>
-.music-player {
-    width: 100%;
-    height: 400px;
-    background-color: #f9f9f9;
-    /* Cor de fundo para destacar o componente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-</style>
   
