@@ -6,12 +6,5 @@
 </template>
   
 <script>
-export default {
-    props: {
-        iframeSrc: {
-            type: String,
-            required: true,
-        },
-    },
-};
+
 </script>

@@ -1,6 +1,9 @@
 <template>
     <div class="contact-form-content-section">
         <form class="contact-form" @submit.prevent="submitForm">
+            <div v-if="showSuccessMessage" class="success-message">
+                {{ msg }}
+            </div>
             <h3>Send us a message</h3>
             <div class="form-group">
                 <input type="text" id="name" placeholder="NAME" v-model="formData.name" required>
@@ -11,7 +14,7 @@
             <div class="form-group">
                 <textarea id="message" placeholder="MESSAGE" v-model="formData.message" required></textarea>
             </div>
-            <button type="submit">SUBMIT</button>
+            <button type="submit" :disabled="showSuccessMessage">SUBMIT</button>
         </form>
     </div>
 </template>
@@ -27,6 +30,8 @@ export default {
                 email: '',
                 message: '',
             },
+            showSuccessMessage: false,
+            msg: ''
         };
     },
     methods: {
@@ -38,13 +43,14 @@ export default {
                 const response = await axios.post(FORMSPREE_ENDPOINT, this.formData);
 
                 if (response.status === 200) {
+                    this.msg = "You message has been received, thank you!";
                     console.log('Dados enviados com sucesso!');
-                    // Você pode adicionar aqui uma mensagem de sucesso ou redirecionar para outra página
                 }
             } catch (error) {
+                this.msg = "Sorry, an error occurred. Please try again later.";
                 console.error('Erro ao enviar dados:', error);
-                // Você pode adicionar aqui uma mensagem de erro para o usuário
             }
+            this.showSuccessMessage = true;
         },
     },
 };
@@ -113,6 +119,12 @@ form input:focus-visible {
 form textarea:focus-visible {
     outline: none;
     /* Remove a borda de foco */
+}
+
+form .success-message {
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
 }
 </style>
   
