@@ -9,7 +9,7 @@
   <style>
   .full-page-background {
     /* Define a imagem de fundo e ajusta-a para cobrir todo o componente */
-    background-image: url('../assets/img/header.jpg');
+    background-image: url('../assets/img/header-2.jpg');
     background-size: cover;
     background-position: center;
     
@@ -20,6 +20,16 @@
     display: flex;
     align-items: center;
   }
+
+  .full-page-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo com 50% de opacidade (mais escura) */
+}
   
   /* Estilos da imagem de logo */
   .logo {

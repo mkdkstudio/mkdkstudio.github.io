@@ -2,7 +2,7 @@
   <div class="about-content-section">
     <div class="image-with-text">
       <div class="image-container">
-        <img src="../assets/img/logo-2.png" alt="Logo" />
+        <img src="../assets/img/space_studio.jpg" alt="Logo" />
       </div>
       <div class="text-container">
         <p class="justified-text">
@@ -41,7 +41,7 @@
 
 .image-container img {
   width: 100%; 
-  height: auto;
+  max-height: 600px;
 }
 
 .text-container {
