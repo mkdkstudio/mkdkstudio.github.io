@@ -2,7 +2,7 @@
   <div>
     <BaseFullPageBackground />
     <BaseAbout />
-    <BasePlatform text="Este é um texto que será exibido no componente Platform" />
+    <BasePlatform/>
     <BaseMusicPlayer />
     <BaseThingsThatIDo text="Este é um texto que será exibido no componente Things that I do" />
     <BaseContactForm />

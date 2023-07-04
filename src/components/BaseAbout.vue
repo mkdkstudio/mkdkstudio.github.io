@@ -21,7 +21,7 @@
 .about-content-section {
   width: 100%;
   height: auto;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   display: flex;
   justify-content: center;
   align-items: center;
