@@ -20,34 +20,51 @@
 <style>
 .about-content-section {
   width: 100%;
-  height: 400px;
+  height: auto;
   background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 11px;
 }
 
 .image-with-text {
   display: flex;
-  /* Define o layout como flexível */
+  flex-wrap: wrap;
   align-items: center;
-  /* Alinha os itens verticalmente no centro */
   gap: 20px;
-  /* Espaçamento entre a imagem e o texto */
 }
 
 .image-container {
   flex: 1;
-  /* A imagem ocupará a maior parte do espaço disponível */
+}
+
+.image-container img {
+  width: 100%; 
+  height: auto;
 }
 
 .text-container {
   flex: 2;
-  /* O texto ocupará duas vezes mais espaço do que a imagem */
+  max-width: 700px;
 }
 
 .justified-text {
   text-align: justify;
-  /* Justifica o texto */
-}</style>
+  word-break: break-word;
+  font-size: larger;
+  color: #656565;
+}
+
+/* Media query para telas pequenas */
+@media screen and (max-width: 768px) {
+  .image-with-text {
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: none; /* Para ignorar a largura máxima definida anteriormente */
+  }
+}
+</style>

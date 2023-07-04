@@ -1,5 +1,5 @@
 {
-  "name": "mkdkstudio.github.io",
+  "name": "mkdkstudio.com",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -21,6 +21,7 @@
     "sharp": "^0.29.0"
   },
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "node-sass": "^8.0.0",
     "sass-loader": "^10.0.0"
   }
