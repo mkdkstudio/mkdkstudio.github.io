@@ -18,8 +18,8 @@
   <style>
   .things-that-i-do-content-section {
     width: 100%;
-    height: 400px;
-    background-color: #f1e1f0; /* Cor de fundo para destacar o componente */
+    min-height: 400px;
+    /* background-color: #f1e1f0; */
     display: flex;
     justify-content: center;
     align-items: center;

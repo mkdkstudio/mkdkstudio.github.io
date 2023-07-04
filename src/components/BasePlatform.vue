@@ -1,53 +1,7 @@
-<!-- <template>
-  <div class="platform-content-section">
-    <div class="links-container">
-      <a href="#" class="link-item">
-        <img src="../assets/img/p5logo_350px.png" alt="Link 1" class="link-image" />
-      </a>
-      <a href="#" class="link-item">
-        <img src="../assets/img/123rf-logo-blackbg.webp" alt="Link 2" class="link-image" />
-      </a>
-    </div>
-  </div>
-</template>
-  
-<script>
-
-</script>
-  
-<style>
-.platform-content-section {
-  width: 100%;
-  height: 400px;
-  background-color: #a0dfd4;
-  /* Cor de fundo para destacar o componente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.links-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.link-item {
-  flex: 1;
-  max-width: 300px;
-}
-
-.link-image {
-  width: 100%;
-  height: auto;
-}
-</style> -->
-
-<!-- --- -->
-
 <template>
   <div class="platform-content-section">
-    <h3 class="image-grid-title">Online Portifolio</h3>
   <div class="image-grid">
+    <h3 class="image-grid-title">Online Portifolio</h3>
     <div class="image-item">
       <a href="https://www.pond5.com/pt/artist/MaykonDeykon?ref=MaykonDeykon">
         <img
@@ -76,12 +30,11 @@
 <style>
 .platform-content-section {
   width: 100%;
-  height: auto;
-  background-color: #a0dfd4;
+  min-height: 400px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; 
 }
 
 .image-grid {
@@ -89,6 +42,12 @@
   flex-wrap: wrap;
   gap: 10px; /* Espaçamento entre as imagens */
   padding: 10px;
+  justify-content: center;
+}
+
+.image-grid-title {
+  text-align: center; 
+  width: 100%;
 }
 
 .image-item {

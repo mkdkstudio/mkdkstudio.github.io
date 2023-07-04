@@ -20,8 +20,8 @@
 <style>
 .about-content-section {
   width: 100%;
-  height: auto;
-  /* background-color: #f0f0f0; */
+  min-height: 400px;
+  background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@
   text-align: justify;
   word-break: break-word;
   font-size: larger;
-  color: #656565;
+  
 }
 
 /* Media query para telas pequenas */

@@ -15,5 +15,6 @@
 <style>
 body {
   font-family: 'Raleway', sans-serif;
+  color: #656565;
 }
 </style>
