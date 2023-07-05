@@ -5,12 +5,12 @@
         <img src="../assets/img/space_studio.jpg" alt="Logo" />
       </div>
       <div class="text-container">
+        <h1>About us</h1>
         <p class="justified-text">
-          MkDk Studio is a dynamic and creative production music studio specializing in crafting captivating soundtracks
-          for various media projects.
-          With a passion for delivering high-quality compositions, MkDk Studio offers a wide range of original music
-          tracks tailored to evoke emotion and enhance storytelling. Explore our portfolio, experience our passion, and
-          let us help you elevate your projects with our exceptional production music.
+          Check out MkDk Studio! We're a super cool and creative production music studio that loves making awesome
+          soundtracks for all sorts of media projects. We're all about delivering top-notch tunes that'll make your
+          project shine and take storytelling to the next level. Take a dive into our portfolio, feel the passion, and let
+          us be the secret sauce for your next big thing with our mind-blowing production music.
         </p>
       </div>
     </div>
@@ -40,7 +40,7 @@
 }
 
 .image-container img {
-  width: 100%; 
+  width: 100%;
   max-height: 600px;
 }
 
@@ -49,11 +49,15 @@
   max-width: 700px;
 }
 
+.text-container h1{
+  text-align: center;
+}
+
 .justified-text {
   text-align: justify;
   word-break: break-word;
   font-size: larger;
-  
+
 }
 
 /* Media query para telas pequenas */
@@ -64,7 +68,7 @@
 
   .image-container {
     width: 100%;
-    max-width: none; /* Para ignorar a largura máxima definida anteriormente */
+    max-width: none;
+    /* Para ignorar a largura máxima definida anteriormente */
   }
-}
-</style>
+}</style>

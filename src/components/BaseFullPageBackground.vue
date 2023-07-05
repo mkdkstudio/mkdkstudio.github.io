@@ -1,7 +1,7 @@
 <template>
     <div class="full-page-background">
       <!-- Adicione a imagem de logo centralizada -->
-      <img class="logo" src="../assets/img/logo-1.png" alt="Logo">
+      <img class="logo" src="../assets/img/logo-3.png" alt="Logo">
       <!-- Conteúdo do componente aqui, se necessário -->
     </div>
   </template>

@@ -1,21 +1,27 @@
 <template>
     <div class="contact-form-content-section">
-        <form class="contact-form" @submit.prevent="submitForm">
+        <div class="form-container">
             <div v-if="showSuccessMessage" class="success-message">
                 {{ msg }}
             </div>
-            <h3>Send us a message</h3>
-            <div class="form-group">
-                <input type="text" id="name" placeholder="NAME" v-model="formData.name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="EMAIL" v-model="formData.email" required>
-            </div>
-            <div class="form-group">
-                <textarea id="message" placeholder="MESSAGE" v-model="formData.message" required></textarea>
-            </div>
-            <button type="submit" :disabled="showSuccessMessage">SUBMIT</button>
-        </form>
+            <h3 class="form-title">Liked what you heard? Drop us a message!</h3>
+            <form class="contact-form" @submit.prevent="submitForm">
+
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="NAME" v-model="formData.name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="EMAIL" v-model="formData.email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="MESSAGE" v-model="formData.message" required></textarea>
+                </div>
+                <button type="submit" :disabled="showSuccessMessage">SUBMIT</button>
+            </form>
+        </div>
+        <div class="email-address">
+            <p>Or contact us at <a href="mailto:contact@mkdkstudio.com">contact@mkdkstudio.com</a></p>
+        </div>
     </div>
 </template>
   
@@ -37,7 +43,6 @@ export default {
     methods: {
         async submitForm() {
             try {
-                // Substitua o 'YOUR_FORMSPREE_ENDPOINT' pelo endpoint fornecido pelo Formspree
                 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xqkvzjny';
 
                 const response = await axios.post(FORMSPREE_ENDPOINT, this.formData);
@@ -59,15 +64,18 @@ export default {
 <style>
 .contact-form-content-section {
     background-color: #343434;
-    /* Cor de fundo para destacar o componente */
-    height: 400px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+.form-container {
+    margin-bottom: 20px;
+}
 
 .contact-form {
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -105,10 +113,11 @@ button:hover {
     background-color: #ea4c69;
 }
 
-form h3 {
+.form-title {
     padding: 10px;
     text-align: center;
     color: whitesmoke;
+    max-width: 400px;
 }
 
 form input:focus-visible {
@@ -124,6 +133,12 @@ form textarea:focus-visible {
 form .success-message {
     padding: 10px;
     text-align: center;
+    color: whitesmoke;
+}
+
+.email-address {
+    text-align: center;
+    margin-top: 20px;
     color: whitesmoke;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="platform-content-section">
   <div class="image-grid">
-    <h3 class="image-grid-title">Online Portifolio</h3>
+    <h1 class="image-grid-title">Online Portifolio</h1>
     <div class="image-item">
       <a href="https://www.pond5.com/pt/artist/MaykonDeykon?ref=MaykonDeykon">
         <img
