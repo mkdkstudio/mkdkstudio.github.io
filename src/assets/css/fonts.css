@@ -1,3 +1,5 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');

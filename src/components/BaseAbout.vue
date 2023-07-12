@@ -12,6 +12,11 @@
           project shine and take storytelling to the next level. Take a dive into our portfolio, feel the passion, and let
           us be the secret sauce for your next big thing with our mind-blowing production music.
         </p>
+        <div class="about-social-container">
+          <a href="https://www.instagram.com/mkdkstudio/" target="_blank"><i class="fab fa-instagram"></i><span
+              class="social-user"> @mkdkstudio</span></a>
+        </div>
+
       </div>
     </div>
   </div>
@@ -26,6 +31,15 @@
   justify-content: center;
   align-items: center;
   padding: 11px;
+}
+
+.about-social-container {
+  font-size: 3em;
+}
+
+.about-social-container .social-user {
+  font-size: 0.4em;
+  vertical-align: middle;
 }
 
 .image-with-text {
@@ -49,7 +63,7 @@
   max-width: 700px;
 }
 
-.text-container h1{
+.text-container h1 {
   text-align: center;
 }
 
@@ -71,4 +85,5 @@
     max-width: none;
     /* Para ignorar a largura máxima definida anteriormente */
   }
-}</style>
+}
+</style>
