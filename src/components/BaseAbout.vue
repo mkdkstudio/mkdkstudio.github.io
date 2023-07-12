@@ -37,6 +37,15 @@
   font-size: 3em;
 }
 
+.about-social-container a{
+  color: #656565;
+}
+
+.about-social-container a:hover{
+  color: #656565c7;
+}
+
+
 .about-social-container .social-user {
   font-size: 0.4em;
   vertical-align: middle;
