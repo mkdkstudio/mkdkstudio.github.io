@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"7l0S":function(n,u,t){"use strict";t.r(u);var e=t("7uw+"),l=Object(e.a)({},(function(){return(0,this._self._c)("BaseNotFound")}),[],!1,null,null,null);u.default=l.exports}}]);
