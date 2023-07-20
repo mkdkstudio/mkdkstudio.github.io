@@ -20,5 +20,12 @@ module.exports = {
       .loader('sass-loader')
       .end();
   },
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'G-3P2H8K3321'
+      }
+    }
+  ],
 }
