@@ -24,7 +24,12 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'G-3P2H8K3321'
+        id: 'G-3P2H8K3321',
+        debug: {
+          enabled: true, // default value
+          trace: true, // default value
+          sendHitTask: true // default value
+        }
       }
     }
   ],
